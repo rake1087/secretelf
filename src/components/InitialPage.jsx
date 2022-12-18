@@ -74,7 +74,7 @@ export default class InitialPage extends Component {
                     backgroundPosition: 'center'
                 }}
             />
-            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+            <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} bgcolor = '#5cdb95' color = '#edf5e1' square>
                 <Box 
                     sx={{
                     my: 8,

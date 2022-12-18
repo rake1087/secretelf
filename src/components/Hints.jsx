@@ -27,7 +27,7 @@ export default function BasicModal() {
         <Typography variant='overline'>
         Hint for Recepient
         </Typography>
-      <Button onClick={handleOpen}>Hint 1</Button>
+      <Button onClick={handleOpen} color = 'secondary'>Hint 1</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -45,7 +45,7 @@ export default function BasicModal() {
         </Box>
       </Modal>
 
-      <Button onClick={handleOpen}>Hint 2</Button>
+      <Button onClick={handleOpen} color = 'secondary'>Hint 2</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -63,7 +63,7 @@ export default function BasicModal() {
         </Box>
       </Modal>
 
-      <Button onClick={handleOpen}>Hint 3</Button>
+      <Button onClick={handleOpen} color = 'secondary'>Hint 3</Button>
       <Modal
         open={open}
         onClose={handleClose}
