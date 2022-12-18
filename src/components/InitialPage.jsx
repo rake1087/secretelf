@@ -15,7 +15,7 @@ import Hints2 from './Hints2'
 import { toHaveFormValues } from '@testing-library/jest-dom/dist/matchers';
 import { getValue } from '@testing-library/user-event/dist/utils';
 import { useRef } from 'react';
-
+import Image3 from '../media/question.png'
 
 
 
@@ -28,7 +28,7 @@ import { useRef } from 'react';
 export default class InitialPage extends Component {
     constructor(props) {
         super(props);
-        this.state = { isCorrect: false, isCorrect2: false };
+        this.state = { isCorrect: null, isCorrect2: null };
       }
   render() {
     const theme = createTheme();
@@ -87,7 +87,7 @@ export default class InitialPage extends Component {
                             m: 1,
                             height: 75,
                             width: 75
-                            }} src= {Image2}/>
+                            }} src= {this.state.isCorrect ? Image2 : Image3 }/>
                         <Modal />
                             <Typography variant = 'h6' >
                             <Grid container spacing={3} columns={16}>
@@ -96,7 +96,7 @@ export default class InitialPage extends Component {
                                 </Grid>
                                 <Grid item xs={8}>
                                     
-                                <TextField id="standard-basic" label="Guess the Name!" variant="standard" error = {!this.state.isCorrect} helperText = {this.state.isCorrect ? "That is correct" : "Keep Trying, Its Case Sensitve"} onChange = {handleChange} disabled = {this.state.isCorrect} color = {!this.state.isCorrect ? 'success' : 'warning'}/>
+                                <TextField id="standard-basic" name='name' label="Guess the Name!" variant="standard" error = {!this.state.isCorrect} helperText = {this.state.isCorrect ? "That is correct" : "Keep Trying, Its Case Sensitve"} onChange = {handleChange} disabled = {this.state.isCorrect} color = {!this.state.isCorrect ? 'success' : 'warning'}/>
 
                                 </Grid>
                             </Grid>
