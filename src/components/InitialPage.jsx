@@ -28,7 +28,6 @@ export default class InitialPage extends Component {
       }
   render() {
 
-    alert('Hit Escape to Open your Christmas Card!')
     const theme = createTheme();
     const handleChange = event => {
         if (event.target.value === 'Paty'){

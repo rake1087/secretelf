@@ -31,6 +31,16 @@ export default function BasicModal() {
   const [isPlaying, setIsPlaying] = React.useState(true);
   const [audio, setAudio] = React.useState(new Audio(Christmas));
 
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 1150,
+    height: 1000,
+
+    
+  }
 
   const handleClose = () => {
     setOpen(false);
@@ -53,12 +63,12 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-                <Grid container component='main' sx={{ height: '100vh'}}>
+                <Grid container component='main' sx={style}>
             
             <Grid
                 item
                 xs = {false}
-                sm = {4}
+                sm = {12}
                 md = {12}
                 sx = {{
                     backgroundImage: `url(${Image2})`,
