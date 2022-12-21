@@ -10,11 +10,7 @@ import Box from '@mui/material/Box';
 import Modal from './Modal'
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
-import Hints from './Hints'
 import Hints2 from './Hints2'
-import { toHaveFormValues } from '@testing-library/jest-dom/dist/matchers';
-import { getValue } from '@testing-library/user-event/dist/utils';
-import { useRef } from 'react';
 import Image3 from '../media/question.png'
 
 
@@ -31,6 +27,8 @@ export default class InitialPage extends Component {
         this.state = { isCorrect: null, isCorrect2: null };
       }
   render() {
+
+    alert('Hit Escape to Open your Christmas Card!')
     const theme = createTheme();
     const handleChange = event => {
         if (event.target.value === 'Paty'){
@@ -113,7 +111,6 @@ export default class InitialPage extends Component {
                        
 
                 </Box>
-                <Hints />
                 <Hints2 />
 
 
